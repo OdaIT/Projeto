@@ -1,0 +1,74 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #222;
+  margin: 0;
+  padding: 1rem;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+form {
+  background: white;
+  width: 100%;
+  max-width: 400px;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+  margin-top: 0;
+  text-align: center;
+}
+
+label {
+  display: block;
+  margin-top: 1rem;
+  margin-left: 0.5rem;
+  font-weight: bold;
+}
+
+input {
+  width: 90%;
+  padding: 0.7rem;
+  margin: auto;
+  display: block;
+  font-size: 1rem;
+}
+
+button {
+  margin-top: 1.5rem;
+  width: 100%;
+  padding: 1rem;
+  font-size: 1rem;
+  background: #880505;
+  color: white;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+}
+
+#sithGif {
+  position: fixed;
+  width: 50vh;
+  height: 50vh;
+
+
+  background-image: url("https://media1.tenor.com/m/M5QmujL5_YQAAAAC/good-evil.gif");
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  background-size: contain;
+
+  pointer-events: none;
+  display: none;
+  z-index: 999;
+}
+
+@media (min-width: 768px) {
+  form {
+    padding: 2rem;
+  }
+}

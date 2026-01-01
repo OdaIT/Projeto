@@ -1,22 +1,28 @@
-document.addEventListener("keydown", function (event) {
-  if (
-    event.target.tagName === "INPUT" ||
-    event.target.tagName === "TEXTAREA" ||
-    event.target.isContentEditable
-  ) {
-    return;
-  }
-
-  if (event.key === "1") {
-    const target = document.getElementById("QuemSomos");
-
-    if (target) {
-      target.scrollIntoView({
-        behavior: "smooth",
-        block: "start",
-      });
+document.addEventListener("DOMContentLoaded", () => {
+  document.addEventListener("keydown", (event) => {
+    if (
+      event.target.tagName === "INPUT" ||
+      event.target.tagName === "TEXTAREA"
+    ) {
+      return;
     }
-  }
+
+    const sections = {
+      "1": "QuemSomos",
+      "2": "ANossaVisao",
+      "3": "OqueDefendemos",
+      "4": "OqueOferecemos",
+      "5": "Juntar-se",
+    };
+
+    const sectionId = sections[event.key];
+
+    if (sectionId) {
+      document
+        .getElementById(sectionId)
+        .scrollIntoView({ behavior: "smooth" });
+    }
+  });
 });
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -42,24 +48,29 @@ document.addEventListener("DOMContentLoaded", () => {
 const audioclick = document.getElementById("background-song");
 audioclick.volume = 0.5;
 
-document.addEventListener(
-  "click",
-  () => {
-    audioclick.play();
-  },
-  { once: true }
-);
+document.addEventListener("DOMContentLoaded", () => {
+  const audio = document.getElementById("background-song");
+  const soundToggle = document.querySelector(".SoundButton input");
 
-const audio = document.getElementById("background-song");
-const toggle = document.getElementById("sound-toggle");
+  audio.muted = false;
 
-audio.volume = 0.5;
+  soundToggle.addEventListener("change", () => {
+    audio.muted = soundToggle.checked;
+  });
+})
 
-toggle.addEventListener("change", () => {
-  if (toggle.checked) {
-    audio.play();
-  } else {
-    audio.pause();
-  }
+document.addEventListener("DOMContentLoaded", () => {
+  const hamburger = document.getElementById("hamburger");
+  const navList = document.getElementById("Nav_List");
+
+  hamburger.addEventListener("click", () => {
+    navList.classList.toggle("active");
+  });
+
+  // fecha o menu ao clicar num link
+  navList.querySelectorAll("a").forEach(link => {
+    link.addEventListener("click", () => {
+      navList.classList.remove("active");
+    });
+  });
 });
-
