@@ -1,0 +1,100 @@
+@import url('https://fonts.cdnfonts.com/css/star-wars');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 8fr 2fr;
+  grid-template-rows: 2fr 5fr 1fr;
+  grid-template-areas:
+    "header header header"
+    "nav    main   aside"
+    "footer footer footer";
+  height: 100vh;
+  gap: 0px;
+}
+
+header {
+  grid-area: header;
+  background: #222;
+  color: white;
+  padding: 20px;
+}
+
+#Nav_List a,
+#Nav_List a:visited,
+#Nav_List a:hover,
+#Nav_List a:active {
+  color: #880505;
+  font-weight: bold;
+  text-decoration: none; /* optional */
+}
+
+h2{
+  font-family: 'Star Wars', sans-serif;
+  font-size: 25px;
+  word-spacing: 1mm;
+}
+
+.bla_bla {
+  font-family: "Inter", sans-serif;
+  font-size: 18px;
+}
+
+#formu {
+  
+}
+
+ul{
+  font-family:"Verdana";
+  font-size: 16px;
+  font-weight: bold;
+}
+
+main {
+  grid-area: main;
+  background: #f5f5f5;
+  padding: 20px;
+}
+
+aside {
+  grid-area: aside;
+  background: #ccc;
+  padding: 20px;
+}
+
+footer {
+  grid-area: footer;
+  background: #222;
+  color: white;
+  padding: 20px;
+}
+
+.SoundButton {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 1000;
+
+  padding: 1rem 1.5rem;
+  background: #ffffff;
+  border-radius: 10%;
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.SoundButton input {
+  display: none;
+}
+
+.SoundButton img {
+  width: 2rem;
+  height: auto;
+  position: absolute;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+.SoundButton .Unmuted { display: none; }
+.SoundButton input:checked ~ .Muted { display: none; }
+.SoundButton input:checked ~ .Unmuted { display: inline; }
