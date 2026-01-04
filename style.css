@@ -27,6 +27,14 @@ nav ol {
   gap: 0.5rem;
 }
 
+figcaption{
+  text-align: center;
+  font-family:'Times New Roman', Times, serif;
+  font-size: 18px;
+  font-weight: bold;
+  margin-top: -15px;
+}
+
 header {
   grid-area: header;
   background: #222;
