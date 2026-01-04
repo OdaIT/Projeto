@@ -3,8 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Sith recruitment form">
   <title>Formulário de Inscrição</title>
-  <link rel="stylesheet" href="form.css" />
+  <link rel="stylesheet" href="form.css">
 </head>
 
 <body>
@@ -22,8 +23,7 @@
     <input type="email" id="email" name="email" required>
 
     <button type="submit">Enviar</button>
-    <p id="successMessage" style="display:none; color: rgb(110, 7, 4); text-align: center; margin-top: 1rem; font-size: 20px; font-family: 'Times New Roman', Times, serif;">
-    Obrigado por te juntares aos Sith, assim que possível 'visitamos' o teu planeta.
+    <p id="successMessage">Obrigado por te juntares aos Sith, assim que possível 'visitamos' o teu planeta.
     </p>
   </form>
   <div id="sithGif"></div>
@@ -35,8 +35,8 @@
     setTimeout(() => {document.getElementById("sithGif").style.display = "block";},3000);
 
     this.reset();
+    form.reset();
   });
 </script>
 </body>
-</html>
 </html>

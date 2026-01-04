@@ -34,7 +34,6 @@ header {
   padding: 20px;
   text-align: center;
   font-family: "Star Wars";
-
 }
 
 #Nav_List a,
@@ -94,17 +93,15 @@ footer {
 }
 
 .SoundButton {
+  display: flex;
   position: fixed;
   top: 20px;
   right: 20px;
   z-index: 1000;
-
-  padding: 1rem 1.5rem;
+  padding: 1rem 1.3rem;
   background: #ffffff;
   border-radius: 10%;
   cursor: pointer;
-
-  display: flex;
   align-items: center;
   justify-content: center;
 }
@@ -130,7 +127,7 @@ footer {
 }
 
 .JoinButton {
-  background: linear-gradient(135deg, #880505, #ff2a2a);
+  background: #880505;
   color: #fff;
   font-size: 1.2rem;
   font-weight: bold;
@@ -142,15 +139,12 @@ footer {
   letter-spacing: 0.1em;
 
   box-shadow: 0 0 15px rgba(255, 42, 42, 0.6);
-  transition: 
-    transform 0.2s ease,
-    box-shadow 0.2s ease,
-    background 0.3s ease;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .JoinButton:hover {
   transform: scale(1.08);
-  box-shadow: 0 0 25px rgba(255, 42, 42, 0.9);
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.973);
 }
 
 @media (max-width: 767px) {
@@ -160,7 +154,7 @@ footer {
 
   nav {
     position: fixed;
-    top: 80px;
+    top: 20px;
     left: 20px;
     z-index: 1000;
   }
@@ -169,8 +163,9 @@ footer {
     display: block;
     background: #ffffff;
     border: none;
+    margin-top: 60px;
     font-size: 2rem;
-    padding: 0.3rem 0.8rem;
+    padding: 0.1rem 0.6rem;
     border-radius: 10%;
     cursor: pointer;
     color: #880505;
@@ -180,7 +175,7 @@ footer {
   #Nav_List {
     display: none;
     position: absolute;
-    top: 45px;
+    top: 95px;
     left: 0px;
     background: #ffffff;
     padding: 1.7rem;
@@ -204,12 +199,20 @@ footer {
     margin: auto;
   }
 
-  header{
+  header {
     display: block;
     margin: auto;
     width: 100%;
     text-align: center;
     font-size: 15px;
+  }
+  .SoundButton {
+    display: flex;
+    position: fixed;
+    margin-top: 60px;
+    top: 20px;
+    right: 40px;
+    z-index: 1000;
   }
 }
 
@@ -252,6 +255,5 @@ footer {
       "header header header"
       "nav    main   aside"
       "footer footer footer";
-    height: 100vh;
   }
 }

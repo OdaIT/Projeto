@@ -8,19 +8,18 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     const sections = {
-      "1": "QuemSomos",
-      "2": "ANossaVisao",
-      "3": "OqueDefendemos",
-      "4": "OqueOferecemos",
-      "5": "Juntar-se",
+      0: "Titulo",
+      1: "QuemSomos",
+      2: "ANossaVisao",
+      3: "OqueDefendemos",
+      4: "OqueOferecemos",
+      5: "Juntar-se",
     };
 
     const sectionId = sections[event.key];
 
     if (sectionId) {
-      document
-        .getElementById(sectionId)
-        .scrollIntoView({ behavior: "smooth" });
+      document.getElementById(sectionId).scrollIntoView({ behavior: "smooth" });
     }
   });
 });
@@ -57,7 +56,7 @@ document.addEventListener("DOMContentLoaded", () => {
   soundToggle.addEventListener("change", () => {
     audio.muted = soundToggle.checked;
   });
-})
+});
 
 document.addEventListener("DOMContentLoaded", () => {
   const hamburger = document.getElementById("hamburger");
@@ -67,8 +66,7 @@ document.addEventListener("DOMContentLoaded", () => {
     navList.classList.toggle("active");
   });
 
-  // fecha o menu ao clicar num link
-  navList.querySelectorAll("a").forEach(link => {
+  navList.querySelectorAll("a").forEach((link) => {
     link.addEventListener("click", () => {
       navList.classList.remove("active");
     });

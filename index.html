@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Sith recruitment website">
     <title>Portfolio</title>
     <link rel="stylesheet" href="style.css" />
     <script src="scripts.js" defer></script>
@@ -11,7 +12,7 @@
   <body>
     <div class="grid">
       <header>
-        <h1>recrutamento sith</h1>
+        <h1 id="Titulo">recrutamento sith</h1>
       </header>
 
       <label class="SoundButton">
@@ -66,6 +67,13 @@
             determinação, liberdade de pensamento e coragem para desafiar o
             destino.
           </p>
+                    <img
+            id="imagens"
+            src="Imagens\Perseguidos2.png"
+            alt="The Sith being attacked"
+            width="50%"
+            height="50%"
+          />
         </section>
         <section id="ANossaVisao">
           <h2>ii. A nossa visao</h2>
@@ -94,7 +102,7 @@
             <li>Crescimento individual</li>
           </ul>
           <img
-            id="Cookies"
+            id="imagens"
             src="https://goombastomp.com/wp-content/uploads/2023/05/IGN-featured-1.jpg"
             alt="The Sith"
             width="50%"
@@ -112,7 +120,7 @@
             <li>Free cookies</li>
           </ul>
           <img
-            id="Cookies"
+            id="Imagens"
             src="Imagens/WeHaveCookies.jpg"
             alt="We have cookies"
             width="20%"
@@ -125,10 +133,10 @@
 
           <form action="formulario.html" target="_blank">
             <p id="formul">Queres-te juntar aos Sith?</p>
-            <input type="radio" name="resposta" id="radioSim" value="Sim!" />
-            <label id="label1">Sim!</label>
-            <input type="radio" name="resposta" id="radioNao" value="Não" />
-            <label id="label2">Não</label> <br /><br />
+            <input type="radio" aria-label="Resposta sim" name="resposta" id="radioSim" value="Sim!" />
+            <label id="label1" aria-label="Resposta sim" >Sim!</label>
+            <input type="radio" aria-label="Resposta não" name="resposta" id="radioNao" value="Não" />
+            <label id="label2" aria-label="Resposta não">Não</label> <br /><br />
             <button type="submit" class="JoinButton">Juntar-se</button>
           </form>
         </section>
