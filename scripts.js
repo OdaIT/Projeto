@@ -44,18 +44,17 @@ document.addEventListener("DOMContentLoaded", () => {
   r2.addEventListener("change", () => swapIfNo(r2));
 });
 
-const audioclick = document.getElementById("background-song");
-audioclick.volume = 0.5;
-
 document.addEventListener("DOMContentLoaded", () => {
   const audio = document.getElementById("background-song");
-  const soundToggle = document.querySelector(".SoundButton input");
 
-  audio.muted = false;
+  const startAudio = () => {
+    audio.play().catch(() => {
+      // evita erros silenciosos
+    });
+    document.removeEventListener("click", startAudio);
+  };
 
-  soundToggle.addEventListener("change", () => {
-    audio.muted = soundToggle.checked;
-  });
+  document.addEventListener("click", startAudio);
 });
 
 document.addEventListener("DOMContentLoaded", () => {
